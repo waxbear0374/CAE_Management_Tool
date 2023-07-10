@@ -1,7 +1,12 @@
 import tkinter as tk 
+from tkinter import * 
 from tkinter import ttk
+#from tkinter import messgaebox  
 
-from project_add import AddProject
+#from project_add import AddProject
+def OnAddProjectLayout():
+    print("ADD")
+    #messagebox.showinfo("Button Clicked", "Somebody clicked!") 
 
 #-- Main Setting
 root = tk.Tk()
@@ -29,9 +34,10 @@ name_entry.grid(row=2, column=0, sticky="ew")
 
 button = ttk.Button(
     widgets_frame, 
-    text="Add Project")
+    text="Add Project",
+    command=OnAddProjectLayout)
 button.grid(row=3, column=0, sticky="nsew")
 
-#AA=OnAddProjectLayout()
+
 
 root.mainloop()
